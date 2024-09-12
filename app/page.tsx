@@ -2,6 +2,8 @@
 import Image from "next/image";
 import bookingFormComponent from "@/app/components/bookingFormComponent";
 import environmentStatusComponent from "@/app/components/environmentStatusComponent";
+import {useState} from "react";
+import {environmentData} from "@/app/types/environmentData";
 
 const pageClassName = "grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]";
 const mainClassName = "flex flex-row gap-8 row-start-2 items-center sm:items-start";
@@ -10,7 +12,27 @@ const tableClassName = "flex gap-4 items-center flex-col sm:flex-col border-2";
 const h2ClassName = "font-bold";
 const footerClassName = "row-start-3 flex gap-6 flex-wrap items-center justify-center";
 
+const wRows: environmentData[] = [{
+  env: "maci1",
+  bookingData: {
+    bookedBy: "me",
+    untilTime: "06:00:00 AM",
+    shareable: false,
+    notes: "notes",
+    bookingDate: new Date().toISOString(),
+  },
+  metadata: {
+    frontendUrls: {
+      feName: "FE",
+      url: "https://localhost:8080"
+    },
+    configManagerUrl: "https://localhost:8080"
+  }
+}];
+
 export default function Home() {
+  const [environmentRows] = useState<environmentData[]>(wRows);
+
   return (
     <div className={pageClassName}>
       <main className={mainClassName}>
@@ -20,7 +42,7 @@ export default function Home() {
         </div>
         <div className={tableClassName}>
           <h2 className={h2ClassName}>Environment Status</h2>
-          {environmentStatusComponent()}
+          {environmentStatusComponent(environmentRows)}
         </div>
       </main>
       <footer className={footerClassName}>

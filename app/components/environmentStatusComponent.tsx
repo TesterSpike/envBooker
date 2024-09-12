@@ -1,9 +1,13 @@
-const environmentStatusComponent = () => (
+import environmentStatusRowComponent from "@/app/components/environmentStatusRowComponent";
+import { environmentData } from "../types/environmentData";
+
+const environmentStatusComponent = (rows: environmentData[]) => (
     <table>
         <thead>
         <tr>
             <th>Environment</th>
-            <th>Used by</th>
+            <th>Booked by</th>
+            <th>Date</th>
             <th>Available from (PST)</th>
             <th>Available from (BST)</th>
             <th>Shareable</th>
@@ -11,16 +15,8 @@ const environmentStatusComponent = () => (
             <th>Remove booking</th>
         </tr>
         </thead>
-        <tbody>
-        <tr>
-            <td>temp</td>
-            <td>temp</td>
-            <td>(PST)</td>
-            <td>(BST)</td>
-            <td>Yes</td>
-            <td>Notes to come</td>
-            <td>Remove booking</td>
-        </tr>
+        <tbody id="environmentStatusBody">
+        {environmentStatusRowComponent(rows)}
         </tbody>
     </table>
 );
