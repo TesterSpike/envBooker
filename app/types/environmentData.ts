@@ -4,5 +4,5 @@ import {environmentMetadata} from "@/app/types/environmentMetadata";
 export type environmentData = {
     env: string;
     metadata: environmentMetadata;
-    bookingData: environmentBookingData;
+    bookingData?: environmentBookingData;
 };
