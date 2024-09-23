@@ -1,7 +1,7 @@
-import {frontendUrl} from "@/app/types/frontendUrl";
-import {configManagerUrl} from "@/app/types/configManagerUrl";
+import {FrontendUrl} from "@/app/types/frontendUrl";
+import {ConfigManagerUrl} from "@/app/types/configManagerUrl";
 
-export type environmentMetadata = {
-    frontendUrls: frontendUrl[];
-    configManagerUrl: configManagerUrl;
+export type EnvironmentMetadata = {
+    frontendUrls: FrontendUrl[];
+    configManagerUrl: ConfigManagerUrl;
 }

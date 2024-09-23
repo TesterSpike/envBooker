@@ -1,7 +1,7 @@
 import environmentStatusRowComponent from "@/app/components/environmentStatusRowComponent";
-import { environmentData } from "../types/environmentData";
+import { EnvironmentData } from "../types/environmentData";
 
-const environmentStatusComponent = (rows: environmentData[]) => (
+const environmentStatusComponent = (rows: EnvironmentData[]) => (
     <table>
         <thead>
         <tr>

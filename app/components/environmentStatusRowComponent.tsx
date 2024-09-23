@@ -1,7 +1,7 @@
-import {environmentData} from "@/app/types/environmentData";
+import {EnvironmentData} from "@/app/types/environmentData";
 import frontendUrlComponent from "@/app/components/frontendUrlComponent";
 
-const environmentStatusComponent = (rows: environmentData[]) => {
+const environmentStatusComponent = (rows: EnvironmentData[]) => {
     return rows.map((row) => {
         const bookingData = row.bookingData;
         const shareable = (row.bookingData?.shareable) ? 'bg-amber-200 border' : 'border'

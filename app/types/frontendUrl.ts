@@ -1,4 +1,4 @@
-export type frontendUrl = {
+export type FrontendUrl = {
     feName: string;
     url: string;
 }

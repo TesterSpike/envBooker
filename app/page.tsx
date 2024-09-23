@@ -3,7 +3,7 @@ import Image from "next/image";
 import bookingFormComponent from "@/app/components/bookingFormComponent";
 import environmentStatusComponent from "@/app/components/environmentStatusComponent";
 import {useState} from "react";
-import {environmentData} from "@/app/types/environmentData";
+import {EnvironmentData} from "@/app/types/environmentData";
 import {initialEnvironmentData} from "@/app/resources/initialEnvironmentData";
 
 const pageClassName = "grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]";
@@ -14,7 +14,7 @@ const h2ClassName = "font-bold";
 const footerClassName = "row-start-3 flex gap-6 flex-wrap items-center justify-center";
 
 export default function Home() {
-  const [environmentRows] = useState<environmentData[]>(initialEnvironmentData);
+  const [environmentRows] = useState<EnvironmentData[]>(initialEnvironmentData);
 
   return (
     <div className={pageClassName}>

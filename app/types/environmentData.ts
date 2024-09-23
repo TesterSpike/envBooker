@@ -1,8 +1,8 @@
-import {environmentBookingData} from "@/app/types/environmentBookingData";
-import {environmentMetadata} from "@/app/types/environmentMetadata";
+import {EnvironmentBookingData} from "@/app/types/environmentBookingData";
+import {EnvironmentMetadata} from "@/app/types/environmentMetadata";
 
-export type environmentData = {
+export type EnvironmentData = {
     env: string;
-    metadata: environmentMetadata;
-    bookingData?: environmentBookingData;
+    metadata: EnvironmentMetadata;
+    bookingData?: EnvironmentBookingData;
 };

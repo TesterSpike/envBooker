@@ -1,6 +1,6 @@
-import {environmentData} from "@/app/types/environmentData";
+import {EnvironmentData} from "@/app/types/environmentData";
 
-export const initialEnvironmentData: environmentData[] = [
+export const initialEnvironmentData: EnvironmentData[] = [
     {
         env: "TST1",
         metadata: {

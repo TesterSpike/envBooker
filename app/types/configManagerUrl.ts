@@ -1,4 +1,4 @@
-export type configManagerUrl = {
+export type ConfigManagerUrl = {
     cmName: string;
     url: string;
 }
