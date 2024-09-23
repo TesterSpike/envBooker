@@ -6,6 +6,8 @@ const environmentStatusComponent = (rows: environmentData[]) => (
         <thead>
         <tr>
             <th>Environment</th>
+            <th>Front End</th>
+            <th>Config URL</th>
             <th>Booked by</th>
             <th>Date</th>
             <th>Available from (PST)</th>
